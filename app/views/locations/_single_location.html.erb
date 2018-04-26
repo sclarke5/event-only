@@ -1,0 +1,10 @@
+<div class="location">
+  <h3><%= location.name %></h3>
+  <h4>City: <%= location.city %></h4>
+  <%= location.description %><br />
+  <%= link_to image_tag(location.image, class: "location"), location_path(location) %>
+</div>
+<!-- location a local variable that hasn't been defined, therefore must pass it a location object.
+In index, this is defined in the display loop, where current_location represents each particular object
+as the loop iterates over @locations; this is passed into the location variable. Similar with the show page,
+where @location represents a particular location as determined by params/id -->
